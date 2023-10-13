@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&family=Patrick+Hand&family=Satisfy&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+.lugarsimo {
+  font-family: "Lugrasimo", cursive;
+}
+
+.satisfy {
+  font-family: "Satisfy", cursive;
+}
+
+.patrick {
+  font-family: "Patrick Hand", cursive;
+}
+
+.textshadow {
+  text-shadow: 0 2px 2px rgb(0 0 0 /0.5);
+}
+.textshadow2 {
+  text-shadow: 0 2px 2px rgba(153, 153, 153, 0.5);
+}
