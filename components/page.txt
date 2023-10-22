@@ -1,0 +1,79 @@
+"use client";
+import Header from "@/components/head";
+import Navbar from "@/components/navbar";
+import Toogle from "@/components/navbar-toogle";
+import Break from "@/components/sec-break";
+import Section1 from "@/components/sec1-home";
+import Section2 from "@/components/sec2-loc";
+import Section3 from "@/components/sec3-story";
+import RSVP from "@/components/sec4-rsvp";
+import { useRef } from "react";
+
+export default function Home() {
+  const homeRef = useRef(null);
+  const locRef = useRef(null);
+  const galeryRef = useRef(null);
+
+  let isPlaying = false;
+
+  const disableScroll = () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    window.onscroll = () => {
+      window.scrollTo(scrollTop, scrollLeft);
+    };
+  };
+  disableScroll();
+
+  const openClick = () => {
+    window.onscroll = () => {};
+    homeRef.current.scrollIntoView({ behavior: "smooth" });
+    playMusic();
+  };
+
+  const playMusic = () => {
+    setPlay(true);
+    const music = document.getElementById("audio");
+    music.play();
+    console.log("isplayin", isPlaying);
+  };
+
+  const toggleMusic = () => {
+    const music = document.getElementById("audio");
+    if (isPlaying) {
+      music.pause();
+    } else {
+      music.play();
+    }
+    setPlay(!setPlay);
+    console.log("isplaying", setPlay);
+  };
+
+  return (
+    <>
+      <Header openClick={openClick} />
+      <Toogle toggleMusic={toggleMusic} />
+
+      <div className="sticky top-0 z-10">
+        <Navbar homeRef={homeRef} locRef={locRef} galeryRef={galeryRef} />
+      </div>
+
+      <div style={{ marginTop: "-4rem" }} ref={homeRef}>
+        <Section1 />
+      </div>
+
+      <Break />
+
+      <div ref={locRef}>
+        <Section2 />
+      </div>
+
+      <div ref={galeryRef}>
+        <Section3 />
+      </div>
+
+      <RSVP />
+    </>
+  );
+}

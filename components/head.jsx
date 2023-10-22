@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Countdown from "./head-countdown";
+import Link from "next/link";
 
-const Header = () => {
+const Header = ({ openClick }) => {
   return (
     <main>
       <div className="hero min-h-screen">
@@ -11,11 +12,11 @@ const Header = () => {
             alt="background"
             fill
             objectFit="cover"
-            style={{ zIndex: 2 }}
+            style={{ zIndex: 5 }}
           />
         </div>
 
-        <div className="hero-content text-center" style={{ zIndex: 5 }}>
+        <div className="hero-content text-center" style={{ zIndex: 7 }}>
           <div className="max-w-md">
             <h1 className="sm:text-5xl text-3xl font-bold  text-white patrick textshadow py-6 ">
               Wedding Invitation
@@ -30,9 +31,12 @@ const Header = () => {
             <div className="py-3 pb-6">
               <Countdown />
             </div>
-            <button className="btn btn-success text-white hover:bg-white hover:text-green-500 shadow-lg">
+            <Link
+              className="btn btn-success text-white hover:bg-white hover:text-green-500 shadow-lg"
+              href="/wedding"
+            >
               Buka Undangan
-            </button>
+            </Link>
           </div>
         </div>
       </div>

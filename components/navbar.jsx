@@ -1,5 +1,3 @@
-import Music from "./navbar-music";
-
 const Navbar = ({ homeRef, locRef, galeryRef }) => {
   const homeClick = () => {
     homeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -49,15 +47,16 @@ const Navbar = ({ homeRef, locRef, galeryRef }) => {
                 <a onClick={homeClick}>Home</a>
               </li>
               <li>
-                <a onClick={locClick}>Location</a>
+                <a onClick={locClick}>Info</a>
+              </li>
+              <li>
+                <a>Story</a>
               </li>
               <li>
                 <a onClick={galeryClick}>Galery</a>
               </li>
               <li>
-                <div>
-                  <Music />
-                </div>
+                <a>RSVP</a>
               </li>
             </ul>
           </div>

@@ -1,8 +1,14 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const Section1 = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-hidden">
       <Image
         src={"/bg3.jpg"}
         alt="background"
@@ -21,13 +27,21 @@ const Section1 = () => {
           <p className="patrick sm:text-3xl text-2xl sm:py-3 py-1">
             بسم الله الرحمن الرحيم
           </p>
-          <p className="patrick text-lg sm:text-xl">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            className="patrick text-lg sm:text-xl px-4"
+          >
             Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
             Bapak/Ibu/Saudara/i dalam acara pernikahan putra-putri kami
           </p>
 
           <div className="flex gap-5 md:flex-row flex-col justify-center items-center p-7 w-screen patrick">
-            <div className=" flex gap-5  text-base ">
+            <div
+              className=" flex gap-5  text-base "
+              data-aos="fade-down-right"
+              data-aos-duration="3000"
+            >
               <div className="flex flex-col text-right p-2">
                 <p className="text-3xl text-pink-500">Raffi Ahmad</p>
                 <p className="text-lg">Putra pertama dari, </p>
@@ -47,7 +61,11 @@ const Section1 = () => {
               </div>
             </div>
 
-            <div className=" flex gap-5  text-base ">
+            <div
+              className=" flex gap-5  text-base "
+              data-aos="fade-up-left"
+              data-aos-duration="3000"
+            >
               <div className="avatar rounded-full overflow-hidden">
                 <div className="w-40  ">
                   <Image
