@@ -36,6 +36,7 @@ export default function Home() {
       />
 
       <Nav
+        className="fixed bottom-0 left-0 right-0"
         homeRef={homeRef}
         locRef={locRef}
         galeryRef={galeryRef}
@@ -68,7 +69,7 @@ export default function Home() {
         <RSVP />
       </div>
 
-      <div ref={GiftRev}>
+      <div className="overflow-hidden" ref={GiftRev}>
         <Gift />
       </div>
     </>

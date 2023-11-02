@@ -13,7 +13,7 @@ const Section2 = () => {
         style={{ zIndex: -1 }}
       />
       <section className="min-h-screen  mx-auto">
-        <div className="flex flex-col justify-center items-center w-100 text-center sm:pt-20 pt-36">
+        <div className="flex flex-col justify-center items-center w-100 text-center sm:pt-20 pt-24">
           <h1
             data-aos="zoom-out-up"
             data-aos-duration="2000"

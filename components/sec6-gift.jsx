@@ -11,11 +11,11 @@ const Gift = () => {
         Hadiah
       </h1>
       <p
-        className="patrick text-white sm:text-3xl text-2xl sm:py-3 py-1"
+        className="patrick text-white sm:text-3xl text-2xl sm:py-3 py-4 text-center"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
-        Kirim Hadiahmu Melalui Rekening berikut <span>😊</span>
+        Kirim Hadiahmu Melalui Rekening berikut <span>😊😊😊</span>
       </p>
 
       <div className="flex gap-5 flex-wrap items-center justify-center sm:pb-0 pb-20">
