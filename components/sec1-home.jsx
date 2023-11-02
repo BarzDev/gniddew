@@ -1,14 +1,8 @@
-"use client";
-import Aos from "aos";
 import Image from "next/image";
-import { useEffect } from "react";
 
 const Section1 = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden ">
       <Image
         src={"/bg3.jpg"}
         alt="background"
@@ -16,15 +10,16 @@ const Section1 = () => {
         objectFit="cover"
         style={{ zIndex: -1 }}
       />
-      <section
-        className="min-h-screen text-black container mx-auto textshadow2"
-        style={{ paddingTop: "8rem" }}
-      >
+      <section className="min-h-screen text-black container mx-auto textshadow2 flex justify-center items-center">
         <div className="flex flex-col justify-center items-center w-100 text-center">
           <h1 className="sm:text-5xl text-4xl text-pink-500 satisfy sm:pb-2 pb-1 ">
             Acara Pernikahan
           </h1>
-          <p className="patrick sm:text-3xl text-2xl sm:py-3 py-1">
+          <p
+            className="patrick sm:text-3xl text-2xl sm:py-3 py-1"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             بسم الله الرحمن الرحيم
           </p>
           <p
@@ -43,16 +38,16 @@ const Section1 = () => {
               data-aos-duration="3000"
             >
               <div className="flex flex-col text-right p-2">
-                <p className="text-3xl text-pink-500">Raffi Ahmad</p>
+                <p className="text-3xl text-pink-500">Lorem Ipsum</p>
                 <p className="text-lg">Putra pertama dari, </p>
-                <p className="text-lg">Bapak Raffi</p>
+                <p className="text-lg">Bapak Lorem</p>
                 <p>dan</p>
-                <p className="text-lg">Ibu Ahmad</p>
+                <p className="text-lg">Ibu Lorem</p>
               </div>
               <div className="avatar rounded-full overflow-hidden">
-                <div className="w-40  ">
+                <div className="w-40 transform scale-x-[-1]  md:transform-none">
                   <Image
-                    src={"/model-male.png"}
+                    src={"/model-man.png"}
                     alt="model-male"
                     fill
                     objectFit="cover"
@@ -67,9 +62,9 @@ const Section1 = () => {
               data-aos-duration="3000"
             >
               <div className="avatar rounded-full overflow-hidden">
-                <div className="w-40  ">
+                <div className="w-40 transform scale-x-[-1]  md:transform-none">
                   <Image
-                    src={"/model-female.png"}
+                    src={"/model-woman.png"}
                     alt="model-female"
                     fill
                     objectFit="cover"
@@ -77,11 +72,11 @@ const Section1 = () => {
                 </div>
               </div>
               <div className="flex flex-col text-left p-2">
-                <p className="text-3xl text-pink-500">Nagita Slavina</p>
+                <p className="text-3xl text-pink-500">Ipsum Lorem</p>
                 <p className="text-lg">Putri kedua dari, </p>
-                <p className="text-lg">Bapak Nagita</p>
+                <p className="text-lg">Bapak Ipsum</p>
                 <p>dan</p>
-                <p className="text-lg">Ibu Slavina</p>
+                <p className="text-lg">Ibu Ipsum</p>
               </div>
             </div>
           </div>

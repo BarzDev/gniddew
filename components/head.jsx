@@ -2,7 +2,7 @@ import Image from "next/image";
 import Countdown from "./head-countdown";
 import Link from "next/link";
 
-const Header = ({ openClick }) => {
+const Header = () => {
   return (
     <main>
       <div className="hero min-h-screen">
@@ -26,7 +26,7 @@ const Header = ({ openClick }) => {
               Bapak/Ibu/Saudara/i dalam acara akad dan resepsi pernikahan kami,
             </p>
             <h1 className="sm:text-5xl text-3xl font-bold  text-white satisfy  textshadow py-5 ">
-              Raffi & Gigi
+              Lorem & Ipsum
             </h1>
             <div className="py-3 pb-6">
               <Countdown />
